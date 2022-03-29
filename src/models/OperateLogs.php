@@ -47,8 +47,8 @@ class OperateLogs extends Model
         return [
             [['data', 'created_at'], 'safe'],
             [['uid'], 'integer'],
-            [['trace_id', 'type'], 'string', 'max' => 32],
-            [['system_code', 'nickname'], 'string', 'max' => 50],
+            [['trace_id'], 'string', 'max' => 32],
+            [['system_code', 'type', 'nickname'], 'string', 'max' => 50],
             [['keyword'], 'string', 'max' => 100],
             [['message'], 'string', 'max' => 255],
             [['ip'], 'string', 'max' => 15],

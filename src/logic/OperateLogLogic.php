@@ -30,13 +30,13 @@ class OperateLogLogic extends Singleton
      * @return bool
      * @throws \yii\db\Exception
      */
-    public function add(string $type, $data, string $keyword = '', string $message = '')
+    public function add(string $type, $data, $keyword = '', $message = '')
     {
         $data = [
             'system_code' => Yii::$app->id,
             'type'        => $type, // 操作类型-用字符串描述
-            'keyword'     => $keyword, // 关键字，用于后期筛选
-            'message'     => $message, // 操作消息
+            'keyword'     => $keyword ?: '', // 关键字，用于后期筛选
+            'message'     => $message ?: '', // 操作消息
             'data'        => $data, // 操作的具体内容
         ];
 
