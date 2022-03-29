@@ -5,7 +5,7 @@ CREATE TABLE `{{%operate_logs}}` (
   `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT COMMENT '自增ID',
   `trace_id` varchar(32) NOT NULL DEFAULT '' COMMENT '客户端日志ID',
   `system_code` varchar(50) NOT NULL DEFAULT '' COMMENT '系统代码',
-  `type` varchar(32) NOT NULL DEFAULT '' COMMENT '操作类型-用字符串描述',
+  `type` varchar(50) NOT NULL DEFAULT '' COMMENT '操作类型-用字符串描述',
   `keyword` varchar(100) NOT NULL DEFAULT '' COMMENT '关键字，用于后期筛选',
   `message` varchar(255) NOT NULL DEFAULT '' COMMENT '操作消息',
   `data` json COMMENT '操作的具体内容',
